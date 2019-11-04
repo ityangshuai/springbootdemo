@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<!--引入thymeleaf标签-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <base th:href="${#httpServletRequest.getContextPath()+'/'}">
+    <meta charset="UTF-8" />
+    <title>首页</title>
+</head>
+<body>
+<b style="display:inline;" th:text="'用户名：' + ${session.user.username}"></b>
+<h3>成功登录！</h3>
+
+
+
+
+<form action="logout" method="post" >
+
+    <input type="submit" value="退出登录"/>
+</form>
+
+</body>
+</html>
